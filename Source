@@ -1,0 +1,29 @@
+function fiboEvenSum(n) {
+  let result = 0;
+  const ARR = [1,2];
+
+ //fibb array
+  for(let i = 2; i<=n; i++){
+    ARR[i] = (ARR[i-2] + ARR[i-1]);
+  }
+
+console.log(ARR);
+ 
+ //checkin if even
+  for(let i=0; i<=n; i++){
+  
+    if(ARR[i] % 2 == 1){ARR[i]= 0;}
+  }
+
+console.log(ARR);
+
+//sum fibb array
+  for(let i = 0; i<=n; i++){
+    result += ARR[i];
+  }
+
+  return result;
+}
+
+console.log(fiboEvenSum(10));
+//That's the source code in more readable way for humans
